@@ -2,18 +2,19 @@
 Little code related to Instagram API writing in Python. 
 
 Limitaciones de la API.
-Instagram API Graph de momento no soporta subir archivos locales --por lo que-- las imagenes deben estar alojadas en la red y ser de acceso público.
-No se admiten las cuentas de creador de Instagram.
-Las cuentas pueden realizar un máximo de 25 publicaciones a través de la API en un período de 24 horas.
-Las publicaciones por secuencia (reels) cuentan como una única publicación.
-JPEG es el único formato de imagen admitido. Los formatos de JPEG extendido, como MPO y JPS, no son compatibles.
-No se admiten las historias.
-No se admiten las etiquetas de compra.
-No se admiten las etiquetas de contenido de marca.
-No se admiten los filtros.
-El símbolo de hashtag (#) debe tener codificación URL HTML como %23 en la leyenda.
-No se admiten publicaciones en Instagram TV.
-Primeros pasos:
+* Instagram API Graph de momento no soporta subir archivos locales --por lo que-- las imagenes deben estar alojadas en la red y ser de acceso público.
+* No se admiten las cuentas de creador de Instagram.
+* Las cuentas pueden realizar un máximo de 25 publicaciones a través de la API en un período de 24 horas.
+* Las publicaciones por secuencia (reels) cuentan como una única publicación.
+* JPEG es el único formato de imagen admitido. Los formatos de JPEG extendido, como MPO y JPS, no son compatibles.
+* No se admiten las historias.
+* No se admiten las etiquetas de compra.
+* No se admiten las etiquetas de contenido de marca.
+* No se admiten los filtros.
+* El símbolo de hashtag (#) debe tener codificación URL HTML como %23 en la leyenda.
+* No se admiten publicaciones en Instagram TV.
+
+##Primeros pasos:
 Cómo buena práctica en Python se recomienda utilizar entornos virtuales como workspace, estos te permitirán, trabajar en entornos separados entre sí, con librerias especificas para cada proyecto.
 
 Crearemos el entorno virtual de trabajo.

@@ -13,7 +13,7 @@ import src.funtions as fn
 
 def main():
     #Publish a new instagram post - Max post per day is 25!-
-    #sp.publish_container()
+    
     fn.publish_container()
 
 

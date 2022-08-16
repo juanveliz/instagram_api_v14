@@ -23,7 +23,7 @@ url_container = urlbase+media+caption+api_token #https://graph.facebook.com/v14.
 url_permalink = url_graph+version_graph
 
 # Methods / funtions section:
-def get_permalink(permalink): # This get the permalink of the publish.
+def get_permalink(permalink): # Get the permalink of the publish.
     permalink = permalink
     res = requests.get(url_permalink+permalink+'?fields=permalink'+api_token)
     status = res.status_code
@@ -36,7 +36,7 @@ def get_permalink(permalink): # This get the permalink of the publish.
         print('Error', res) 
     return permalink_url
 
-def create_container_id(): # This get and set the Containter ID
+def create_container_id(): # Get and set the Containter ID
     print('Obteniendo ID de contenedor... espere un momento:')
     res = requests.post(url_container)
     ig_container_id = res.json()
@@ -55,7 +55,7 @@ def create_container_id(): # This get and set the Containter ID
 # Use the POST /{ig-user-id}/media_publish endpoint to publish the container ID
 # POST https://graph.facebook.com/v14.0/{ig-user-id}/media_publish?creation_id={ig-container-id}&access_token={user_token}
 
-def publish_container(): # This publish the container create before and push using POST method
+def publish_container(): # Publish the container created before using POST method
         try:
             ig_container_id = create_container_id()
             url = urlbase+media_publish+ig_container_id+api_token
@@ -73,4 +73,5 @@ def publish_container(): # This publish the container create before and push usi
                 print(f'Error: {status} : {ig_publish_id}')
 
         except:
-            return 
+                print(f'Error: {status} : {res}')
+        return 

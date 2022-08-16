@@ -1,7 +1,7 @@
 # How use Instagram API Graph version 14 in Python
 Little code related to Instagram API writing in Python. 
 
-Limitaciones de la API.
+`##`Limitaciones de la API.
 * Instagram API Graph de momento no soporta subir archivos locales --por lo que-- las imagenes deben estar alojadas en la red y ser de acceso público.
 * No se admiten las cuentas de creador de Instagram.
 * Las cuentas pueden realizar un máximo de 25 publicaciones a través de la API en un período de 24 horas.
@@ -25,7 +25,7 @@ cd .\API-Instagram\
 #Activamos en entorno
 .\Scripts\Activate.ps1
 ```
-shell python
+
 En este caso, estoy trabajando en entorno Windows, si necesitas saber como crear entornos virtuales en otros sistemas operativos te dejo en enlace a la documentación.
 Una vez activado, crearemos una carpeta de recursos llamado src.
 ```
@@ -40,7 +40,7 @@ pip install python-dotenv
 ```
 Con esto ya tenemos los más básico, utilizaremos la librería request para utilizar los métodos HTTP; Get y Post.
 
-Generalidades
+`##`Generalidades
 El proceso de publicación cuenta con dos pasos, el primero es crear un contenedor media que nos devolverá una ID. Este contenedor almacenará la url de la imagen que hemos seleccionado y finalmente publicaremos ese contenedor.
 
 En la carpeta src, crearemos un archivo al que llamaremos app.py
@@ -85,7 +85,7 @@ api_ig_id=os.getenv('API_IG_ID')
 ```
 Como se indicó anteriormente, este proceso consta de dos pasos, crear el ID del contenedor y crear el ID de la publicación.
 
-Definimos las constantes.
+`##`Definimos las constantes.
 ```
 #funtions.py
 #API endpoints
@@ -103,7 +103,7 @@ ig-user-id es la ID de instagram, y user_token_from_api es el token de acceso.
 # Using method POST https://graph.facebook.com/v14.0/{ig-user-id}/media?image_url=http.urlimage.jpg&caption={caption hashtag simbol = %23}&access_token=user_token_from_api
 ```
 
-Métodos o funciones
+`##`Métodos o funciones
 
 La función get_container_id() creará el contenedor, y retornará la id.
 ```
@@ -181,7 +181,7 @@ Obteniendo Permalink
 https://www.instagram.com/p/HKRyskzNbu_/
 Publicación exitosa! 200
 ```
-Códigos de respuesta:
+`##`Códigos de respuesta:
 Estado 200 indica que la solicitud fue procesada con éxito. Mientras el estado 400 indica que algo falló.  Puedes conocer los detalles que se almacenan en la variable res.
 
 Ten siempre en cuenta que solo tienes un máximo de 25 publicaciones cada 24 horas.

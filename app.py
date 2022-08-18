@@ -6,14 +6,10 @@
 #
 #   This python application allows to automate Instagram posting using the official API.
 # 
-
 import src.funtions as fn
-
 def main():
     #Publish a new instagram post - Max post per day is 25!-
-    
     fn.publish_container()
-
 
 if __name__ == '__main__':
     print('Iniciando proceso espere un momento ...')

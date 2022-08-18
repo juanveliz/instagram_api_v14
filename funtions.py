@@ -11,11 +11,11 @@ version_graph = 'v14.0/'
 media = '/media?image_url=https://upload.wikimedia.org/wikipedia/commons/a/a3/June_odd-eyed-cat.jpg'
 media_publish='/media_publish?creation_id='
 caption = '&caption= This cat is awesome %23Pythonrules'
+
 #Create Container
 # REF: https://developers.facebook.com/docs/instagram-api/guides/content-publishing/
 # Endpoint
 # Using method POST https://graph.facebook.com/v14.0/{ig-user-id}/media?image_url=http.urlimage.jpg&caption={caption hashtag simbol = %23}&access_token=user_token_from_api
-
 
 #Url base & Url container
 urlbase = url_graph+version_graph+api_ig_id   #https://graph.facebook.com/v14.0/{ig-user-id}/
@@ -47,8 +47,7 @@ def create_container_id(): # Get and set the Containter ID
             print(url_container)
             container_id = ig_container_id['id']
     else:
-            print('Error: ',res)
-        
+            print('Error: ',res)        
     return container_id
 
 #Publish container media
@@ -71,7 +70,6 @@ def publish_container(): # Publish the container created before using POST metho
                 print (f'Publicación exitosa! {status}')
             else:
                 print(f'Error: {status} : {ig_publish_id}')
-
         except:
                 print(f'Error: {status} : {res}')
         return 
